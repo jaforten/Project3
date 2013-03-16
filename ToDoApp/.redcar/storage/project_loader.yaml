@@ -1,0 +1,5 @@
+--- 
+open_files: 
+  - index.html
+  - javascripts/app/app.js
+  - stylesheets/app/app.css

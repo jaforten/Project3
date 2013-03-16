@@ -1,0 +1,12 @@
+--- 
+cursor_positions: 
+  - :path: index.html
+    :cursor_offset: 340
+    :timestamp: 2013-02-20 11:15:41 -05:00
+  - :path: javascripts/app/app.js
+    :cursor_offset: 253
+    :timestamp: 2013-02-20 11:11:56 -05:00
+  - :path: stylesheets/app/app.css
+    :cursor_offset: 48
+    :timestamp: 2013-02-20 10:58:59 -05:00
+files_to_retain: 0
