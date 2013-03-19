@@ -18,7 +18,7 @@ var main = function () {
     var description = $("#description").val()
     var categories = $("#categories").val().replace(",","");
     
-    $("<li id= input>" + description + "</li>").prependTo(".description ul");
+    $( "<li id= input>" + description + "</li>").prependTo(".description ul");
     $("<li id= input>" + categories + "</li>").prependTo(".categories ul");
     alert("Added To List!");
     
@@ -34,8 +34,8 @@ var main = function () {
           description = todo.description
           
           category = todo.categories.join(" ")
-       
-          $("<li id= 'descript'>" + description + "</li>").appendTo(".description ul");
+          
+          $( "<li id= 'descript'>" + "<button id= remove>" + "x" + "</button>" + " " + description + "</li>").appendTo(".description ul");
           $("<li id= 'cat'>" +  category + "</li>").appendTo(".categories ul");
           
            
