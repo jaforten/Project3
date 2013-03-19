@@ -1,46 +1,50 @@
 var main = function () {
-  
-  
   var setUpClickHandler = function (anchor) {
     anchor.click(function () {
       var target = $(this).attr("href");
-    
       $(".active").removeClass("active");
       $(this).addClass("active");
       $("#"+target).addClass("active");
-    
       return false;
     });    
   };
- 
-  var setUpJSONTab = function (tab) {
-    
-    //tab1
-    var tab_all = $("<a>"+"All"+"</a>").addClass("tab").attr("href","#");
-    $(tab_all).appendTo(".tabs");
-    setUpClickHandler(tab_all);
-    
-    
-    //tab2
-    var tab_categorized = $("<a>"+"Categorized"+"</a>").addClass("tab").attr("href", "#");
-    $(tab_categorized).appendTo(".tabs");
-    setUpClickHandler(tab_categorized);
-    
-    //tab3
-    var tab_edit = $("<a>"+"Edit"+"</a>").addClass("tab").attr("href","#");
-    $(tab_edit).appendTo(".tabs");
-    setUpClickHandler(tab_edit);
-    
-    //content
-    //var content = $("<div>"+""+"</div>").css("font-size","2em").addClass("tab").attr("id","");
-    //$(".content").append(content);
-  };
+//tab:
+  var all= $(".tabs");
+  setUpClickHandler(all);
 
- 
-  $.getJSON("tabs/all.json", setUpJSONTab); 
+//content input:
+  $(".submit").click(function () {
+    
+    var description = $("#description").val()
+    var categories = $("#categories").val().replace(",","");
+    
+    $("<li id= input>" + description + "</li>").prependTo(".description ul");
+    $("<li id= input>" + categories + "</li>").prependTo(".categories ul");
+    alert("Added To List!");
+    
+  });
+//content display:
+
+  $.getJSON("tabs/all.json",  function(data) {
+        alert("success");
+        
+        data.forEach(function (todo) {
+          var description = [{}] 
+          var category = []        
+          description = todo.description
+          
+          category = todo.categories.join(" ")
+       
+          $("<li id= 'descript'>" + description + "</li>").appendTo(".description ul");
+          $("<li id= 'cat'>" +  category + "</li>").appendTo(".categories ul");
+          
+           
+         
+        });
+         
+});
+
   setUpClickHandler($(".tabs .tab"));
-
- 
-}
+};
 
 $(document).ready(main);

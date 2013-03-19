@@ -1,17 +1,36 @@
 <!doctype html>
 <html>
   <head>
+    <title>To Do App</title>
     <link rel="stylesheet" href="stylesheets/app/app.css">
   </head>
   
   <body>
-    <div class="tabs">
+    <div class= "tabs">
+      <a class= "tab active" href= "all">All</a>
+      <a class= "tab" href= "categorize">Categorize</a>
+      <a class= "tab" href= "edit">Edit</a>
     </div>
     
     <div class="content">
-      <div class="tab active" id="tab1">&nbsp;</div>
-      <div class="tab" id="tab2">&nbsp;</div>
-      <div class="tab" id="tab3">&nbsp;</div>
+      <div class= "tab active" id= "all">
+        <div class= "description">
+          <ul></ul>
+        </div>
+        <div class= "categories">
+          <ul></ul>
+        </div>
+      </div>
+      <div class= "tab" id= "categorize">&nbsp;</div>
+      <div class= "tab" id= "edit">
+        <div id= "form">
+          description: <input class= "input" type="text" name= "description" id= "description" value= "Enter Text!">
+          categories:  <input class= "input" type="text" id="categories" value= "Enter Text!">
+        </div>
+        <input class= "submit" type= "submit" value="Submit">
+      </div>
+      <div class= "description"></div>
+      <div class= "category"></div>
     </div>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="javascripts/app/app.js"></script>

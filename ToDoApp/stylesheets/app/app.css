@@ -1,83 +1,69 @@
-body{
-  background: #ccc;
-  width: auto;
-  height: auto;
-}
-
 .tabs {
   margin-top: 50px;
   margin-bottom:0px;
-  font-size: 2em;
-  margin-top: 1px;
-  margin-bottom: 4px;
-  margin-left: 0px;
-  padding: 0px;
-  width: auto;
-  height: auto;
-  
 }
+
 
 .tabs .tab {
-  background: #efefef;
-  padding: 4px;
+  background: #ccc;
+  padding: 5px;
   margin: 3px;
-  border-bottom: 0px;
-  border-top: 2px solid black;
-  height: auto;
-  width: auto;
-  margin-bottom: 0px;
-
-  
+  font-size: 2em;
 }
 
-.tabs .active {
+.tabs .categorize{
   background: #ccc;
+  padding: 5px;
+}
+.tabs .active {
+  background: #efefef;
   border: 1px solid black;
   border-bottom-width: 0;
-  border-bottom: 0px;
+  margin-bottom: 2px;
+}
+
+
+.content #all{
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+}
+
+.content #edit{
+  background: #efefef;
+  margin-top: 3px;
+  height: 140px;
+}
+.content .description {
   font-size: 1em;
-  margin-bottom: 0px;
-  padding: 3px;
+  color: blue;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  height: 10%;
+  width: auto;
+  background: #efefef;
+}
+.content .categories{
+  font-size: 1em;
+  color: red;
+  margin: 0px;
+  padding-left: 40px;
+  float: left;
+  height: 10%;
+  width: auto;
+  background: #efefef;
 }
 
 .content .tab {
-  display: none; 
-  background: #efefef;
-  width: auto;
-  height: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-  border-top: 2px solid white;
-  
+  display: none;
 }
 
 .content .active {
   display: block;
   background: #ccc;
-  min-height: 420px;
-  width: auto;
-  height: auto;
-  margin-top: 0px;
-  padding: 20px;
-  border-top: 0px;
-  border-bottom: 2px solid black;
-  border-right: 0px ;
-  border-left: 1px solid black;
+  height: 100%;
+  width: 100%;
+  margin-top:2px;
 }
 
-.content{
-  margin-top: 0px;
-  margin-left: 0px;
-  padding: 0px;
-  height: auto;;
-  width: auto;
-  border-top: 0px;
-  border-top: 0px;
-  border-bottom: 2px solid black;
-  border-right: 0px;
-  border-left: 0px;
-  
-  
-  
-}
