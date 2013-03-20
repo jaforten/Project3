@@ -38,6 +38,27 @@
   height: 140px;
 }
 
+#category{
+  width: 25%;
+  float: right;
+}
+#descript {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+span {
+  width: 50%;
+}
+
+ul {
+  width: 50%;
+  margin: 0px;
+  padding: 0px;
+}
+
 #remove{
   width: 20px;
   height: 25px;
@@ -54,7 +75,7 @@
   margin: 0px;
   padding: 0px;
   height: auto;
-  width: 50%;
+  width: 100%;
   float: left;
   background: #efefef;
 }

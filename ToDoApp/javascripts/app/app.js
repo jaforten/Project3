@@ -8,9 +8,20 @@ var main = function () {
       return false;
     });    
   };
+  
+  var setUpClickHandlerCategory = function (category) {
+    category.click(function () {
+      var target = $(this).attr("href");
+      $(".active").removeClass("active");
+      $(this).addClass("active");
+      $("#"+target).addClass("active");
+      return false;
+    });    
+  };
 //tab:
-  var all= $(".tabs");
-  setUpClickHandler(all);
+  var tabclick= $(".tabs");
+  setUpClickHandler(tabclick);
+  
 
 //content input:
   $(".submit").click(function () {
@@ -18,7 +29,7 @@ var main = function () {
     var description = $("#description").val()
     var categories = $("#categories").val().replace(",","");
     
-    $( "<li id= input>" + description + "</li>").prependTo(".description ul");
+    $( "<li id= input>" + description + categories + "</li>").prependTo(".description ul");
     $("<li id= input>" + categories + "</li>").prependTo(".categories ul");
     alert("Added To List!");
     
@@ -32,11 +43,12 @@ var main = function () {
           var description = [{}] 
           var category = []        
           description = todo.description
-          
+         
           category = todo.categories.join(" ")
           
-          $( "<li id= 'descript'>" + "<button id= remove>" + "x" + "</button>" + " " + description + "</li>").appendTo(".description ul");
-          $("<li id= 'cat'>" +  category + "</li>").appendTo(".categories ul");
+          $( "<li id= 'descript'>" + "<button id= remove>" + "x" + "</button>" + "<font size= 6, color= blue>" + description + "</font>"  + 
+             "  " + "<font size= 4, color= red>" + category + "</font>"  + "</li>").appendTo("ul");
+          
           
            
          
