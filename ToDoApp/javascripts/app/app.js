@@ -29,8 +29,10 @@ var main = function () {
     var description = $("#description").val()
     var categories = $("#categories").val().replace(",","");
     
-    $( "<li id= input>" + description + categories + "</li>").prependTo(".description ul");
-    $("<li id= input>" + categories + "</li>").prependTo(".categories ul");
+    $("<li id= input>" + "<button id= remove>" + "x" + "</button>" + "<font size= 6, color= blue>" + description + "</font>" + " " +
+      "<font size= 4, color= red>" + categories + "</font>" + "</li>").prependTo("ul");
+    
+    
     alert("Added To List!");
     
   });
@@ -40,13 +42,13 @@ var main = function () {
         alert("success");
         
         data.forEach(function (todo) {
-          var description = [{}] 
+          var label = [{}] 
           var category = []        
           description = todo.description
          
           category = todo.categories.join(" ")
           
-          $( "<li id= 'descript'>" + "<button id= remove>" + "x" + "</button>" + "<font size= 6, color= blue>" + description + "</font>"  + 
+          $( "<li id= 'descript'>" + "<button id= 'remove'>" + "x" + "</button>" + "<font size= 6, color= blue>" + description + "</font>"  + 
              "  " + "<font size= 4, color= red>" + category + "</font>"  + "</li>").appendTo("ul");
           
           
@@ -54,7 +56,15 @@ var main = function () {
          
         });
          
-});
+  });
+  
+  //content remove
+  
+  $(document).on('click', "#remove",function () {
+    $(this).parent("li").remove();
+    
+    return false
+  });
 
   setUpClickHandler($(".tabs .tab"));
 };
