@@ -1,5 +1,6 @@
 body {
   background: #364B58;
+  font-family: 'Tauri', sans-serif;
 }
 
 .tabs {
@@ -79,8 +80,12 @@ body {
 
 ul {
   width: 100%;
-  margin: 0px;
+  margin-left: 20px;
   padding: 0px;
+}
+
+#cats {
+  margin-left: 10px;
 }
 
 #remove{
